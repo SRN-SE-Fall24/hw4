@@ -1,0 +1,1 @@
+pkill -f "bash infinite.sh"

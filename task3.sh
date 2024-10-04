@@ -1,0 +1,1 @@
+cat titanic.csv | sed 's/[ \t]*$//' | awk -F, '$3 == 2 && substr($NF,1,1) == "S"' | sed 's/female/F/' | sed 's/male/M/' | awk -F, '{print $0} { sum += $7; count++ } END { if (count > 0) print "Average age : " sum/count }'
